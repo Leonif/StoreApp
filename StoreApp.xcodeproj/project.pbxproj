@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7998B198252D145300DAC8A5 /* RealmSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7998B197252D145300DAC8A5 /* RealmSaveService.swift */; };
 		79E31B68252786DD0035242E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B67252786DD0035242E /* AppDelegate.swift */; };
 		79E31B6A252786DD0035242E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B69252786DD0035242E /* SceneDelegate.swift */; };
 		79E31B6C252786DD0035242E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B6B252786DD0035242E /* MainViewController.swift */; };
@@ -14,14 +15,16 @@
 		79E31B74252786E00035242E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E31B73252786E00035242E /* Assets.xcassets */; };
 		79E31B77252786E00035242E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E31B75252786E00035242E /* LaunchScreen.storyboard */; };
 		79E31B82252787830035242E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B81252787830035242E /* MainView.swift */; };
-		79E31B86252789170035242E /* SaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B85252789170035242E /* SaveService.swift */; };
+		79E31B86252789170035242E /* CoreDataSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B85252789170035242E /* CoreDataSaveService.swift */; };
 		79E31B8A25278B1B0035242E /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 79E31B8925278B1B0035242E /* SwiftKeychainWrapper */; };
 		79E31B8E25278E8D0035242E /* Human+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B8C25278E8D0035242E /* Human+CoreDataClass.swift */; };
 		79E31B8F25278E8D0035242E /* Human+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B8D25278E8D0035242E /* Human+CoreDataProperties.swift */; };
 		79E31B94252792810035242E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B93252792810035242E /* CoreDataStack.swift */; };
+		B3469D6F8434BA687647A360 /* Pods_StoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D2CDBF35C6D40CEC9CEB91 /* Pods_StoreApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7998B197252D145300DAC8A5 /* RealmSaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSaveService.swift; sourceTree = "<group>"; };
 		79E31B64252786DD0035242E /* StoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E31B67252786DD0035242E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E31B69252786DD0035242E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,10 +34,13 @@
 		79E31B76252786E00035242E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79E31B78252786E00035242E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79E31B81252787830035242E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		79E31B85252789170035242E /* SaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveService.swift; sourceTree = "<group>"; };
+		79E31B85252789170035242E /* CoreDataSaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaveService.swift; sourceTree = "<group>"; };
 		79E31B8C25278E8D0035242E /* Human+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Human+CoreDataClass.swift"; sourceTree = "<group>"; };
 		79E31B8D25278E8D0035242E /* Human+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Human+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79E31B93252792810035242E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8721DCF0CEC079D473DA4828 /* Pods-StoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreApp.debug.xcconfig"; path = "Target Support Files/Pods-StoreApp/Pods-StoreApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A4D2CDBF35C6D40CEC9CEB91 /* Pods_StoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E784B77510F71B20E7440F /* Pods-StoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreApp.release.xcconfig"; path = "Target Support Files/Pods-StoreApp/Pods-StoreApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E31B8A25278B1B0035242E /* SwiftKeychainWrapper in Frameworks */,
+				B3469D6F8434BA687647A360 /* Pods_StoreApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CBE3049CC22FEB61A4EB844 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8721DCF0CEC079D473DA4828 /* Pods-StoreApp.debug.xcconfig */,
+				D8E784B77510F71B20E7440F /* Pods-StoreApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		71FDB1F733265889E6CECA34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4D2CDBF35C6D40CEC9CEB91 /* Pods_StoreApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7998B18E252D115C00DAC8A5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				79E31B6B252786DD0035242E /* MainViewController.swift */,
+				79E31B81252787830035242E /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7998B191252D116B00DAC8A5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				79E31B67252786DD0035242E /* AppDelegate.swift */,
+				79E31B69252786DD0035242E /* SceneDelegate.swift */,
+				79E31B73252786E00035242E /* Assets.xcassets */,
+				79E31B75252786E00035242E /* LaunchScreen.storyboard */,
+				79E31B78252786E00035242E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7998B194252D134F00DAC8A5 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				79E31B93252792810035242E /* CoreDataStack.swift */,
+				79E31B85252789170035242E /* CoreDataSaveService.swift */,
+				7998B197252D145300DAC8A5 /* RealmSaveService.swift */,
+				79E31B70252786DD0035242E /* StoreApp.xcdatamodeld */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
 		79E31B5B252786DD0035242E = {
 			isa = PBXGroup;
 			children = (
 				79E31B66252786DD0035242E /* StoreApp */,
 				79E31B65252786DD0035242E /* Products */,
+				5CBE3049CC22FEB61A4EB844 /* Pods */,
+				71FDB1F733265889E6CECA34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,16 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				79E31B9125278EDA0035242E /* Human */,
-				79E31B67252786DD0035242E /* AppDelegate.swift */,
-				79E31B93252792810035242E /* CoreDataStack.swift */,
-				79E31B69252786DD0035242E /* SceneDelegate.swift */,
-				79E31B6B252786DD0035242E /* MainViewController.swift */,
-				79E31B85252789170035242E /* SaveService.swift */,
-				79E31B81252787830035242E /* MainView.swift */,
-				79E31B73252786E00035242E /* Assets.xcassets */,
-				79E31B75252786E00035242E /* LaunchScreen.storyboard */,
-				79E31B78252786E00035242E /* Info.plist */,
-				79E31B70252786DD0035242E /* StoreApp.xcdatamodeld */,
+				7998B194252D134F00DAC8A5 /* DataLayer */,
+				7998B191252D116B00DAC8A5 /* Support */,
+				7998B18E252D115C00DAC8A5 /* Main */,
 			);
 			path = StoreApp;
 			sourceTree = "<group>";
@@ -99,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79E31B7B252786E00035242E /* Build configuration list for PBXNativeTarget "StoreApp" */;
 			buildPhases = (
+				9D99174E43065530FAB35FC6 /* [CP] Check Pods Manifest.lock */,
 				79E31B60252786DD0035242E /* Sources */,
 				79E31B61252786DD0035242E /* Frameworks */,
 				79E31B62252786DD0035242E /* Resources */,
+				DB6BDD97174907135B627B6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,15 +215,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D99174E43065530FAB35FC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoreApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB6BDD97174907135B627B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StoreApp/Pods-StoreApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StoreApp/Pods-StoreApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StoreApp/Pods-StoreApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79E31B60252786DD0035242E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E31B86252789170035242E /* SaveService.swift in Sources */,
+				79E31B86252789170035242E /* CoreDataSaveService.swift in Sources */,
 				79E31B6C252786DD0035242E /* MainViewController.swift in Sources */,
 				79E31B68252786DD0035242E /* AppDelegate.swift in Sources */,
 				79E31B94252792810035242E /* CoreDataStack.swift in Sources */,
+				7998B198252D145300DAC8A5 /* RealmSaveService.swift in Sources */,
 				79E31B6A252786DD0035242E /* SceneDelegate.swift in Sources */,
 				79E31B82252787830035242E /* MainView.swift in Sources */,
 				79E31B8F25278E8D0035242E /* Human+CoreDataProperties.swift in Sources */,
@@ -311,12 +407,13 @@
 		};
 		79E31B7C252786E00035242E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8721DCF0CEC079D473DA4828 /* Pods-StoreApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 379294YDPQ;
-				INFOPLIST_FILE = StoreApp/Info.plist;
+				INFOPLIST_FILE = StoreApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,12 +427,13 @@
 		};
 		79E31B7D252786E00035242E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E784B77510F71B20E7440F /* Pods-StoreApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 379294YDPQ;
-				INFOPLIST_FILE = StoreApp/Info.plist;
+				INFOPLIST_FILE = StoreApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

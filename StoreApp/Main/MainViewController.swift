@@ -7,10 +7,20 @@
 
 import UIKit
 
+struct HumanEntity {
+    let name: String
+    let age: Int
+}
+
+protocol SaveServiceInterface {
+    func saveHuman(name: String, age: Int)
+    func readHumabList() -> [HumanEntity]
+}
+
 class MainViewController: UIViewController {
     
     let rootView = MainView()
-    let service = SaveService()
+    let service: SaveServiceInterface = RealmSaveService()
     
     init() {
         super.init(nibName: .none, bundle: .none)
@@ -37,7 +47,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.saveHuman(name: "Александр", age: 20)
+        service.saveHuman(name: "Александр", age: 67)
         
         let humanList = service.readHumabList()
         

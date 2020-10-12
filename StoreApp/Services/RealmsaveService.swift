@@ -7,23 +7,6 @@
 
 import RealmSwift
 
-
-class HumanObject: Object {
-    @objc dynamic var id: Int = 0
-    @objc dynamic var name = ""
-    @objc dynamic var age: Int = 0
-
-    override class func primaryKey() -> String? {
-        return "id"
-    }
-}
-
-
-class Pet: Object {
-    @objc dynamic var name: String = ""
-    @objc dynamic var owner: HumanObject?
-}
-
 class RealmsaveService: SaveServiceInterface {
     
     let realm: Realm
@@ -62,14 +45,14 @@ class RealmsaveService: SaveServiceInterface {
     }
     
     func saveAnimal(name: String, id: Int) {
-        let owner = realm.objects(HumanObject.self).filter("id == %@", id).first!
-        let pet = Pet()
-        pet.name = name
-        pet.owner = owner
-        
-        try! realm.write {
-            realm.add(pet)
-        }
+//        let owner = realm.objects(HumanObject.self).filter("id == %@", id).first!
+//        let pet = Pet()
+//        pet.name = name
+//        pet.owner = owner
+//
+//        try! realm.write {
+//            realm.add(pet)
+//        }
         
     }
     

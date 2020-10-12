@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
 //        }
         
         
-        service.update(name: "Alex", for: 1)
+//        service.update(name: "Alex", for: 1)
         
     }
 }

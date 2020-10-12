@@ -21,6 +21,7 @@
 		79E31B94252792810035242E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B93252792810035242E /* CoreDataStack.swift */; };
 		79F5342E2530C5E20094C0FC /* CoreDataSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5342C2530C5E20094C0FC /* CoreDataSaveService.swift */; };
 		79F5342F2530C5E20094C0FC /* RealmsaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5342D2530C5E20094C0FC /* RealmsaveService.swift */; };
+		79F534622534B7390094C0FC /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F534612534B7390094C0FC /* RealmObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		79E31B93252792810035242E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		79F5342C2530C5E20094C0FC /* CoreDataSaveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSaveService.swift; sourceTree = "<group>"; };
 		79F5342D2530C5E20094C0FC /* RealmsaveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmsaveService.swift; sourceTree = "<group>"; };
+		79F534612534B7390094C0FC /* RealmObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
 		8AB5A2F8D73CD529E65E92CF /* Pods-StoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreApp.release.xcconfig"; path = "Target Support Files/Pods-StoreApp/Pods-StoreApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +87,8 @@
 		79E31B66252786DD0035242E /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				79F534642534B7700094C0FC /* Objects */,
 				79F534312530C5E80094C0FC /* Services */,
-				79E31B9125278EDA0035242E /* Human */,
 				79F534342530C6090094C0FC /* Supported */,
 				79F534382530C62E0094C0FC /* Main */,
 			);
@@ -132,6 +134,15 @@
 				79E31B81252787830035242E /* MainView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		79F534642534B7700094C0FC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				79F534612534B7390094C0FC /* RealmObjects.swift */,
+				79E31B9125278EDA0035242E /* Human */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		A4781F0117D4131835B87DF1 /* Pods */ = {
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E31B6C252786DD0035242E /* MainViewController.swift in Sources */,
+				79F534622534B7390094C0FC /* RealmObjects.swift in Sources */,
 				79E31B68252786DD0035242E /* AppDelegate.swift in Sources */,
 				79E31B94252792810035242E /* CoreDataStack.swift in Sources */,
 				79E31B6A252786DD0035242E /* SceneDelegate.swift in Sources */,

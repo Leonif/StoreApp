@@ -8,25 +8,17 @@
 import RealmSwift
 
 
-class HumanObject: Object {
-    @objc dynamic var id: Int = 0
-    @objc dynamic var name = ""
-    @objc dynamic var age: Int = 0
-
-    override class func primaryKey() -> String? {
-        return "id"
-    }
+protocol RealmOutput: class {
+    func update(_ changes: RealmCollectionChange<Results<HumanObject>>)
 }
 
-
-class Pet: Object {
-    @objc dynamic var name: String = ""
-    @objc dynamic var owner: HumanObject?
-}
-
-class RealmsaveService: SaveServiceInterface {
+class RealmsaveService {
     
     let realm: Realm
+    var token: NotificationToken?
+    
+    
+    weak var delegate: RealmOutput?
     
     var autoId = 1
     
@@ -36,42 +28,43 @@ class RealmsaveService: SaveServiceInterface {
         debugPrint(realm.configuration.fileURL)
         
         
-         
-        
     }
     
     func readHumabList() -> [HumanEntity] {
         let list = realm.objects(HumanObject.self)
         
+        
+        self.token = list.observe({ [weak self] (changes) in
+            guard let self = self else { return }
+            self.delegate?.update(changes)
+        })
+        
         return list.map { HumanEntity(name: $0.name, age: $0.age) }
     }
     
-    func saveHuman(name: String, age: Int, petName: String, gender: Bool) -> Int {
+    func saveHuman(name: String, age: Int) {
         let human = HumanObject()
-        human.id = autoId
         human.name = name
         human.age = age
         
         try! realm.write {
             realm.add(human)
         }
-        
-        return human.id
-        
-        
     }
     
     func saveAnimal(name: String, id: Int) {
-        let owner = realm.objects(HumanObject.self).filter("id == %@", id).first!
-        let pet = Pet()
-        pet.name = name
-        pet.owner = owner
-        
-        try! realm.write {
-            realm.add(pet)
-        }
+//        let owner = realm.objects(HumanObject.self).filter("id == %@", id).first!
+//        let pet = Pet()
+//        pet.name = name
+//        pet.owner = owner
+//
+//        try! realm.write {
+//            realm.add(pet)
+//        }
         
     }
+    
+    
     
     func update(name: String, for id: Int) {
         let olena = realm.objects(HumanObject.self).filter("id == %@", id).first!

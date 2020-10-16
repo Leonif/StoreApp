@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class CoreDataSaveService: SaveServiceInterface {
+class CoreDataSaveService {
     func update(name: String, for id: Int) {
         
     }
@@ -28,12 +28,12 @@ class CoreDataSaveService: SaveServiceInterface {
     
     let storeStack = CoreDataStack(modelName: "StoreApp")
     
-    func saveHuman(name: String, age: Int, petName: String, gender: Bool) -> Int {
-        let context = storeStack.context
-        let human = Human(context: context)
-        human.name = name
-        human.age = Int16(age)
-        storeStack.saveContext()
+    func saveHuman(name: String, age: Int) {
+//        let context = storeStack.context
+//        let human = Human(context: context)
+//        human.name = name
+//        human.age = Int16(age)
+//        storeStack.saveContext()
         
         
         fatalError()

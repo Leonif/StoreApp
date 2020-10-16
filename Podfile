@@ -8,6 +8,11 @@ target 'StoreApp' do
   # Pods for StoreApp
   pod 'RealmSwift'
 
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  
 end
 
 post_install do |installer|

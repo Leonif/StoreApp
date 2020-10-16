@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5D89E2B1315CD109200670B9 /* Pods_StoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C6C83615DE26B510D9CACF /* Pods_StoreApp.framework */; };
+		793C6F582539FE6200EDA24E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C6F572539FE6200EDA24E /* FirebaseService.swift */; };
+		793C6F5C2539FFBD00EDA24E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793C6F5B2539FFBD00EDA24E /* GoogleService-Info.plist */; };
+		793C6F6D253A018700EDA24E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C6F6C253A018700EDA24E /* LoginViewController.swift */; };
+		793C6F71253A01A100EDA24E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C6F70253A01A100EDA24E /* LoginView.swift */; };
 		79E31B68252786DD0035242E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B67252786DD0035242E /* AppDelegate.swift */; };
 		79E31B6A252786DD0035242E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B69252786DD0035242E /* SceneDelegate.swift */; };
 		79E31B6C252786DD0035242E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E31B6B252786DD0035242E /* MainViewController.swift */; };
@@ -27,6 +31,10 @@
 /* Begin PBXFileReference section */
 		3393078902BF396384D79027 /* Pods-StoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreApp.debug.xcconfig"; path = "Target Support Files/Pods-StoreApp/Pods-StoreApp.debug.xcconfig"; sourceTree = "<group>"; };
 		53C6C83615DE26B510D9CACF /* Pods_StoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		793C6F572539FE6200EDA24E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		793C6F5B2539FFBD00EDA24E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		793C6F6C253A018700EDA24E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		793C6F70253A01A100EDA24E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		79E31B64252786DD0035242E /* StoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E31B67252786DD0035242E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E31B69252786DD0035242E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		793C6F4D2539FB9900EDA24E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				79E31B9125278EDA0035242E /* objects */,
+				79E31B93252792810035242E /* CoreDataStack.swift */,
+				79F5342C2530C5E20094C0FC /* CoreDataSaveService.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		793C6F502539FBB300EDA24E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				79F534642534B7700094C0FC /* Objects */,
+				79F5342D2530C5E20094C0FC /* RealmsaveService.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		793C6F562539FDD600EDA24E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				793C6F572539FE6200EDA24E /* FirebaseService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		793C6F6B253A017300EDA24E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				793C6F6C253A018700EDA24E /* LoginViewController.swift */,
+				793C6F70253A01A100EDA24E /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		79E31B5B252786DD0035242E = {
 			isa = PBXGroup;
 			children = (
@@ -87,29 +131,30 @@
 		79E31B66252786DD0035242E /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
-				79F534642534B7700094C0FC /* Objects */,
+				793C6F5B2539FFBD00EDA24E /* GoogleService-Info.plist */,
 				79F534312530C5E80094C0FC /* Services */,
 				79F534342530C6090094C0FC /* Supported */,
+				793C6F6B253A017300EDA24E /* Login */,
 				79F534382530C62E0094C0FC /* Main */,
 			);
 			path = StoreApp;
 			sourceTree = "<group>";
 		};
-		79E31B9125278EDA0035242E /* Human */ = {
+		79E31B9125278EDA0035242E /* objects */ = {
 			isa = PBXGroup;
 			children = (
 				79E31B8C25278E8D0035242E /* Human+CoreDataClass.swift */,
 				79E31B8D25278E8D0035242E /* Human+CoreDataProperties.swift */,
 			);
-			path = Human;
+			path = objects;
 			sourceTree = "<group>";
 		};
 		79F534312530C5E80094C0FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				79E31B93252792810035242E /* CoreDataStack.swift */,
-				79F5342C2530C5E20094C0FC /* CoreDataSaveService.swift */,
-				79F5342D2530C5E20094C0FC /* RealmsaveService.swift */,
+				793C6F562539FDD600EDA24E /* Firebase */,
+				793C6F4D2539FB9900EDA24E /* CoreData */,
+				793C6F502539FBB300EDA24E /* Realm */,
 				79E31B70252786DD0035242E /* StoreApp.xcdatamodeld */,
 			);
 			path = Services;
@@ -140,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				79F534612534B7390094C0FC /* RealmObjects.swift */,
-				79E31B9125278EDA0035242E /* Human */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -221,6 +265,7 @@
 			files = (
 				79E31B77252786E00035242E /* LaunchScreen.storyboard in Resources */,
 				79E31B74252786E00035242E /* Assets.xcassets in Resources */,
+				793C6F5C2539FFBD00EDA24E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +326,11 @@
 				79F5342F2530C5E20094C0FC /* RealmsaveService.swift in Sources */,
 				79F5342E2530C5E20094C0FC /* CoreDataSaveService.swift in Sources */,
 				79E31B82252787830035242E /* MainView.swift in Sources */,
+				793C6F71253A01A100EDA24E /* LoginView.swift in Sources */,
 				79E31B8F25278E8D0035242E /* Human+CoreDataProperties.swift in Sources */,
 				79E31B72252786DD0035242E /* StoreApp.xcdatamodeld in Sources */,
+				793C6F582539FE6200EDA24E /* FirebaseService.swift in Sources */,
+				793C6F6D253A018700EDA24E /* LoginViewController.swift in Sources */,
 				79E31B8E25278E8D0035242E /* Human+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

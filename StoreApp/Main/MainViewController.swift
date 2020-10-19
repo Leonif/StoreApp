@@ -13,17 +13,16 @@ struct HumanEntity {
     let age: Int
 }
 
-//protocol SaveServiceInterface {
-//    func saveHuman(name: String, age: Int)
-//    func readHumabList() -> [HumanEntity]
-//    func saveAnimal(name: String, id: Int)
-//    func update(name: String, for id: Int)
-//}
+protocol SaveServiceInterface {
+    func saveHuman(name: String, age: Int)
+    func readHumabList() -> [HumanEntity]
+    func readHumabList(callback: @escaping ([HumanEntity]) -> Void)
+}
 
 class MainViewController: UIViewController {
     
     let rootView = MainView()
-    let service = RealmsaveService()
+    let service: SaveServiceInterface = FirebaseService()
     
     var humanList: [HumanEntity] = []
     
@@ -45,7 +44,6 @@ class MainViewController: UIViewController {
     
     
     private func setup() {
-        service.delegate = self
         rootView.tableView.dataSource = self
         rootView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "humanCell")
     }
@@ -55,32 +53,22 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         rootView.button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
-        humanList = service.readHumabList()
+        service.readHumabList() { [unowned self] list in
+            humanList = list
+            rootView.tableView.reloadData()
+        }
     }
     
     @objc
     private func handleTap() {
         let name = rootView.recordField.text ?? "no name"
         service.saveHuman(name: name, age: 15)
-    }
-}
-
-
-extension MainViewController: RealmOutput {
-    func update(_ changes: RealmCollectionChange<Results<HumanObject>>) {
-        switch changes {
-        case .initial(let results):
+        service.readHumabList() { [unowned self] list in
+            humanList = list
             rootView.tableView.reloadData()
-        case let .update(results, deletions, insertions, modifications):
-//            print(results, deletions, insertions, modifications)
-            humanList = results.map { HumanEntity(name: $0.name, age: $0.age) }
-            rootView.tableView.reloadData()
-        case let .error(error):
-            debugPrint(error.localizedDescription)
         }
     }
 }
-
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

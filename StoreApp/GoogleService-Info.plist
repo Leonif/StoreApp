@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1051951158804-qqejd06u9j7ne1kqdkrbakdhq1a3a8rc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1051951158804-qqejd06u9j7ne1kqdkrbakdhq1a3a8rc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBhih1LmdEG2gd8pTY_PZbb2FDN2_kU1k8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1051951158804</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lessons.pattern.StoreApp</string>
+	<key>PROJECT_ID</key>
+	<string>fir-geekbrains</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-geekbrains.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1051951158804:ios:99bb737e4bd8330c34f901</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-geekbrains.firebaseio.com</string>
+</dict>
+</plist>

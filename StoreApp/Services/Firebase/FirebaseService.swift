@@ -8,7 +8,7 @@
 import FirebaseDatabase
 
 class FirebaseService: SaveServiceInterface {
-    func readHumabList() -> [HumanEntity] {
+    func readHumanList() -> [HumanEntity] {
         fatalError("use async method")
     }
     
@@ -24,7 +24,7 @@ class FirebaseService: SaveServiceInterface {
         
     }
     
-    func readHumabList(callback: @escaping ([HumanEntity]) -> Void) {
+    func readHumanList(callback: @escaping ([HumanEntity]) -> Void) {
         
         humanListRef.observeSingleEvent(of: .value) { (snapshot) in
             

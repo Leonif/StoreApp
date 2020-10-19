@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 struct HumanEntity {
     let name: String
@@ -15,8 +14,8 @@ struct HumanEntity {
 
 protocol SaveServiceInterface {
     func saveHuman(name: String, age: Int)
-    func readHumabList() -> [HumanEntity]
-    func readHumabList(callback: @escaping ([HumanEntity]) -> Void)
+    func readHumanList() -> [HumanEntity]
+    func readHumanList(callback: @escaping ([HumanEntity]) -> Void)
 }
 
 class MainViewController: UIViewController {
@@ -53,7 +52,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         rootView.button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
-        service.readHumabList() { [unowned self] list in
+        service.readHumanList() { [unowned self] list in
             humanList = list
             rootView.tableView.reloadData()
         }
@@ -63,7 +62,7 @@ class MainViewController: UIViewController {
     private func handleTap() {
         let name = rootView.recordField.text ?? "no name"
         service.saveHuman(name: name, age: 15)
-        service.readHumabList() { [unowned self] list in
+        service.readHumanList() { [unowned self] list in
             humanList = list
             rootView.tableView.reloadData()
         }

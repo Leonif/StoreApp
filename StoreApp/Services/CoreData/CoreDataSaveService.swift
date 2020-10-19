@@ -9,12 +9,12 @@ import UIKit
 import CoreData
 
 class CoreDataSaveService: SaveServiceInterface {
-    func readHumabList(callback: @escaping ([HumanEntity]) -> Void) {
+    func readHumanList(callback: @escaping ([HumanEntity]) -> Void) {
         
     }
     
 
-    func readHumabList() -> [HumanEntity] {
+    func readHumanList() -> [HumanEntity] {
         let context = storeStack.context
         
         let list = (try? context.fetch(Human.fetchRequest()) as? [Human]) ?? []

@@ -9,7 +9,7 @@ import RealmSwift
 
 
 class RealmsaveService: SaveServiceInterface {
-    func readHumabList(callback: @escaping ([HumanEntity]) -> Void) {
+    func readHumanList(callback: @escaping ([HumanEntity]) -> Void) {
         
     }
     
@@ -22,7 +22,7 @@ class RealmsaveService: SaveServiceInterface {
         debugPrint(realm.configuration.fileURL)
     }
     
-    func readHumabList() -> [HumanEntity] {
+    func readHumanList() -> [HumanEntity] {
         let list = realm.objects(HumanObject.self)
         return list.map { HumanEntity(name: $0.name, age: $0.age) }
     }
